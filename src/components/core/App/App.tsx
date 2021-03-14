@@ -3,9 +3,11 @@ import { SplitPane } from "react-multi-split-pane";
 import { GlobalStyle, SettingsButton, StyledApp } from "./styles";
 import { CodeEditor } from "../../common/CodeEditor/CodeEditor";
 import { Preview } from "../../common/Preview/Preview";
+import { SettingsModal } from "../SettingsModal/SettingsModal";
 
 function App() {
-  const [markdown, setMarkdown] = useState("mdpreview.app\n---");
+  const [markdown, setMarkdown] = useState("# mdpreview.app\n---");
+  const [settingsOpen, setSettingsOpen] = useState(false);
   return (
     <>
       <GlobalStyle />
@@ -14,7 +16,12 @@ function App() {
           <CodeEditor onChange={(code) => setMarkdown(code)} value={markdown} />
           <Preview markdown={markdown} />
         </SplitPane>
-        <SettingsButton aria-label="Open settings" />
+        <SettingsButton
+          aria-label="Open settings"
+          aria-pressed={settingsOpen}
+          onClick={() => setSettingsOpen(!settingsOpen)}
+        />
+        <SettingsModal open={settingsOpen} />
       </StyledApp>
     </>
   );
