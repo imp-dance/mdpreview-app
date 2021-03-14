@@ -1,5 +1,15 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+export const GlobalStyle = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+    body, html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family:16px;
+        padding:0;
+        margin:0;
+    }
+`;
+
 export const StyledApp = styled.div`
   background: #001514;
   --padding: 2rem;
@@ -62,12 +72,21 @@ export const StyledApp = styled.div`
   }
 `;
 
-export const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap');
-    body, html {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family:16px;
-        padding:0;
-        margin:0;
-    }
+export const SettingsButton = styled.button`
+  appearance: none;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  background: url("/settings.png") no-repeat center center;
+  background-size: 1.1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
 `;

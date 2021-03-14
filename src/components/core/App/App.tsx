@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SplitPane } from "react-multi-split-pane";
-import { GlobalStyle, StyledApp } from "./styles";
+import { GlobalStyle, SettingsButton, StyledApp } from "./styles";
 import { CodeEditor } from "../../common/CodeEditor/CodeEditor";
 import { Preview } from "../../common/Preview/Preview";
 
@@ -14,6 +14,7 @@ function App() {
           <CodeEditor onChange={(code) => setMarkdown(code)} value={markdown} />
           <Preview markdown={markdown} />
         </SplitPane>
+        <SettingsButton aria-label="Open settings" />
       </StyledApp>
     </>
   );
