@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/mdpreview-app/static/js/main.686df0f5.chunk.js",
+    "main.js.map": "/mdpreview-app/static/js/main.686df0f5.chunk.js.map",
+    "runtime-main.js": "/mdpreview-app/static/js/runtime-main.c3d41bd2.js",
+    "runtime-main.js.map": "/mdpreview-app/static/js/runtime-main.c3d41bd2.js.map",
+    "static/css/2.116a9d0d.chunk.css": "/mdpreview-app/static/css/2.116a9d0d.chunk.css",
+    "static/js/2.94d825b8.chunk.js": "/mdpreview-app/static/js/2.94d825b8.chunk.js",
+    "static/js/2.94d825b8.chunk.js.map": "/mdpreview-app/static/js/2.94d825b8.chunk.js.map",
+    "index.html": "/mdpreview-app/index.html",
+    "static/css/2.116a9d0d.chunk.css.map": "/mdpreview-app/static/css/2.116a9d0d.chunk.css.map",
+    "static/js/2.94d825b8.chunk.js.LICENSE.txt": "/mdpreview-app/static/js/2.94d825b8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3d41bd2.js",
+    "static/css/2.116a9d0d.chunk.css",
+    "static/js/2.94d825b8.chunk.js",
+    "static/js/main.686df0f5.chunk.js"
+  ]
+}
