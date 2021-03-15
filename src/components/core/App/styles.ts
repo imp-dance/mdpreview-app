@@ -1,10 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<{
+  fontSize?: Number;
+}>`
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap');
     body, html {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family:16px;
+        font-size:${(props) => `${props.fontSize}px` ?? "16px"};
         padding:0;
         margin:0;
     }
@@ -76,14 +78,15 @@ export const SettingsButton = styled.button`
   appearance: none;
   border: none;
   border-radius: 50%;
-  width: 2.2rem;
-  height: 2.2rem;
+  font-size: 16px;
+  width: 2.2em;
+  height: 2.2em;
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 1em;
+  right: 1em;
   cursor: pointer;
   background: url("/settings.png") no-repeat center center;
-  background-size: 1.1rem;
+  background-size: 1.1em;
   background-color: rgba(0, 0, 0, 0.1);
   opacity: 0.7;
   &:hover {
