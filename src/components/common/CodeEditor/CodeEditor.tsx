@@ -12,7 +12,7 @@ type Props = {
 
 export const CodeEditor = ({ onChange, value }: Props) => {
   return (
-    <>
+    <Container>
       <StyledCodeEditor
         highlight={(code) =>
           Prism.highlight(code, Prism.languages.markdown, "markdown")
@@ -20,9 +20,15 @@ export const CodeEditor = ({ onChange, value }: Props) => {
         onValueChange={(code) => onChange(code)}
         value={value}
       />
-    </>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  max-height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+`;
 
 const StyledCodeEditor = styled(Editor)`
   color: #f9f9f9;
