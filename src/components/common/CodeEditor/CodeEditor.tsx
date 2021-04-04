@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Editor from "react-simple-code-editor";
 import Prism from "prismjs";

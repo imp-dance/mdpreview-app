@@ -20,6 +20,13 @@ const PreviewContainer = styled(ReactMarkdown)`
   > *:first-child {
     margin-top: 0 !important;
   }
+  code {
+    color: #333;
+  }
+  pre {
+    background: #f9f9f9;
+    padding: 1rem;
+  }
 `;
 
 export default Preview;

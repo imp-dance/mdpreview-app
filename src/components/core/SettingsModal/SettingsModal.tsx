@@ -10,7 +10,7 @@ type Props = {
 
 export const SettingsModal = ({ open, onChange }: Props) => {
   const focusRef = useRef<HTMLDivElement>(null);
-  const { setSettings, markdownStyle, fontSize } = useContext(SettingsContext);
+  const { setSettings, fontSize } = useContext(SettingsContext);
   useEffect(() => {
     if (focusRef.current && open) {
       focusRef.current.focus();
@@ -21,37 +21,6 @@ export const SettingsModal = ({ open, onChange }: Props) => {
   }, [open, focusRef]);
   return (
     <StyledSettingsModal open={open} ref={focusRef}>
-      <h4>Markdown style</h4>
-      <label>
-        <input
-          type="radio"
-          name="markdown_style"
-          onClick={() => setSettings({ markdownStyle: "traditional" })}
-          value={"traditional"}
-          checked={markdownStyle === "traditional"}
-        />{" "}
-        Traditional
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="markdown_style"
-          onClick={() => setSettings({ markdownStyle: "github" })}
-          value={"github"}
-          checked={markdownStyle === "github"}
-        />{" "}
-        Github flavored
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="markdown_style"
-          onClick={() => setSettings({ markdownStyle: "jira" })}
-          value={"jira"}
-          checked={markdownStyle === "jira"}
-        />{" "}
-        Jira flavored
-      </label>
       <h4>Font-size</h4>
       <label>
         <input
@@ -76,10 +45,11 @@ const StyledSettingsModal = styled.div<Partial<Props>>`
   }
   position: fixed;
   bottom: 4em;
-  right: 3.5em;
+  right: 1.2em;
   background: #c4c1d8;
   border-radius: 5px;
   border-bottom-right-radius: 0px;
+  min-width: 200px;
   padding: 1em;
   transition: all 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
   display: flex;
